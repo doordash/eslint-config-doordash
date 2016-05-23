@@ -6,7 +6,6 @@ module.exports = {
     'import/no-unresolved': 0,
     'max-len': 0,
     'no-underscore-dangle': [2, { 'allowAfterThis': true }],
-    'no-unresolved': 0,
     'react/prefer-stateless-function': 0,
     'react/sort-comp': 0,
     'semi': [2, 'never'],
