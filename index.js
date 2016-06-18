@@ -9,5 +9,6 @@ module.exports = {
     'react/prefer-stateless-function': 0,
     'react/sort-comp': 0,
     'semi': [2, 'never'],
+    "no-param-reassign": ["error", { "props": false }],
   },
 };
