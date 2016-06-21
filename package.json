@@ -1,6 +1,6 @@
 {
   "name": "@doordash/eslint-config-doordash",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "DoorDash's ESLint config, following our styleguide",
   "main": "index.js",
   "scripts": {
