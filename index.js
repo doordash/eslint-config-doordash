@@ -11,5 +11,6 @@ module.exports = {
     'react/sort-comp': 0,
     'semi': [2, 'never'],
     "no-param-reassign": ["error", { "props": false }],
+    "react/jsx-no-bind": 0,
   },
 };
