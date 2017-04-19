@@ -3,7 +3,8 @@ module.exports = {
   parser: 'babel-eslint',
   rules: {
     'arrow-body-style': 0,
-    'camelcase': 0,
+    'arrow-parens': ['error', 'as-needed'],
+    'camelcase': ['error'],
     'import/no-unresolved': 0,
     'max-len': 0,
     'no-param-reassign': 0,
