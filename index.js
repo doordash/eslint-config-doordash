@@ -9,10 +9,17 @@ module.exports = {
     'max-len': 0,
     'no-param-reassign': 0,
     'no-underscore-dangle': [2, { 'allowAfterThis': true }],
-    'no-unused-vars': ["error", { "vars": "all", "args": "after-used" }],
+    'no-unused-vars': ['error', { vars: 'all', args: 'after-used' }],
     'react/jsx-no-bind': 0,
     'react/prefer-stateless-function': 0,
     'react/sort-comp': 0,
     'semi': [2, 'never'],
+    'no-multiple-empty-lines': [
+      'error', 
+      { 
+        max: 1, 
+        maxEOF: 0 
+      },
+    ],
   },
 };
