@@ -1,6 +1,9 @@
 module.exports = {
   extends: ['eslint-config-airbnb'].map(require.resolve),
   parser: 'babel-eslint',
+  plugins: [
+    "mocha"
+  ],
   rules: {
     'arrow-body-style': 0,
     'arrow-parens': ['error', 'as-needed'],
@@ -14,11 +17,12 @@ module.exports = {
     'react/prefer-stateless-function': 0,
     'react/sort-comp': 0,
     'semi': [2, 'never'],
+    "mocha/no-exclusive-tests": "error",
     'no-multiple-empty-lines': [
-      'error', 
-      { 
-        max: 1, 
-        maxEOF: 0 
+      'error',
+      {
+        max: 1,
+        maxEOF: 0
       },
     ],
   },
