@@ -1,29 +1,50 @@
 module.exports = {
-  extends: ['eslint-config-airbnb'].map(require.resolve),
+  env: {
+    'jest/globals': true,
+    browser: true,
+  },
+  extends: [
+    'eslint-config-airbnb',
+    'eslint-config-prettier',
+    'eslint-config-prettier/react',
+  ].map(require.resolve),
   parser: 'babel-eslint',
-  plugins: [
-    "mocha"
-  ],
+  plugins: ['jest', 'prettier'],
   rules: {
     'arrow-body-style': 0,
     'arrow-parens': ['error', 'as-needed'],
-    'camelcase': ['error'],
+    camelcase: ['error'],
+    'no-prototype-builtins': 0,
+    'import/prefer-default-export': 0,
+    'import/no-named-default': 0,
+    'import/first': 0,
     'import/no-unresolved': 0,
-    'max-len': 0,
-    'no-param-reassign': 0,
-    'no-underscore-dangle': [2, { 'allowAfterThis': true }],
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used' }],
+    'import/no-extraneous-dependencies': 0,
+    'no-underscore-dangle': [2, { allowAfterThis: true }],
+    semi: [2, 'never'],
     'react/jsx-no-bind': 0,
     'react/prefer-stateless-function': 0,
     'react/sort-comp': 0,
-    'semi': [2, 'never'],
-    "mocha/no-exclusive-tests": "error",
+    'react/jsx-filename-extension': 0,
+    'jest/no-disabled-tests': 'error',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/valid-expect': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 80,
+        singleQuote: true,
+        semi: false,
+        trailingComma: 'es5',
+      },
+    ],
     'no-multiple-empty-lines': [
       'error',
       {
         max: 1,
-        maxEOF: 0
+        maxEOF: 0,
       },
     ],
   },
-};
+}

@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+      80
+    ],
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 80,
+    "prettier.trailingComma": "es5"
+}
