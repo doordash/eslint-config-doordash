@@ -1,0 +1,18 @@
+# Both issues this repository has ever received were people trying to reach
+# DoorDash Support. Turning off blank issues and offering these links first
+# gets them to a team that can actually help, instead of a public repo that
+# cannot. See #12.
+blank_issues_enabled: false
+contact_links:
+  - name: DoorDash account, order, or Dasher help
+    url: https://help.doordash.com
+    about: >-
+      This repository is only an ESLint configuration that DoorDash engineers
+      use to lint JavaScript. Nobody here can see your DoorDash account, your
+      orders, your Dasher application, or a background check. DoorDash Support
+      can.
+  - name: Dasher support, including background check status
+    url: https://help.doordash.com/dashers/s/
+    about: >-
+      Questions about dashing, deliveries, pay, the Dasher app, the email
+      address on your account, or the status of a background check.

@@ -1,0 +1,55 @@
+name: Bug report
+description: A rule in this ESLint config behaves incorrectly
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        This form is for `@doordash/eslint-config-doordash`, the ESLint config
+        package. For anything to do with the DoorDash app, your account, or a
+        background check, please use [DoorDash
+        Support](https://help.doordash.com) instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Which rule fired, or failed to fire, and on what code?
+      placeholder: |
+        `semi` reports on ... but the styleguide says ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: >-
+        The smallest snippet that shows the problem, plus the command you ran.
+      render: javascript
+    validations:
+      required: true
+
+  - type: input
+    id: config-version
+    attributes:
+      label: "@doordash/eslint-config-doordash version"
+      placeholder: 2.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: eslint-version
+    attributes:
+      label: ESLint version
+      description: Output of `npx eslint --version`.
+      placeholder: v4.19.1
+    validations:
+      required: true

@@ -1,0 +1,36 @@
+name: Issue templates
+
+# GitHub ignores an issue template it cannot parse and silently falls back to
+# blank issues -- no error is surfaced anywhere. Since blank issues are what
+# produced #11 and #12, a template that quietly stops working would undo the
+# routing without anyone noticing. This check makes that loud.
+
+on:
+  pull_request:
+    paths:
+      - '.github/ISSUE_TEMPLATE/**'
+      - '.github/workflows/issue-templates.yaml'
+      - 'scripts/validate-issue-templates.rb'
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/ISSUE_TEMPLATE/**'
+      - '.github/workflows/issue-templates.yaml'
+      - 'scripts/validate-issue-templates.rb'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      # Ruby ships on the runner image, so this needs no install step and adds
+      # no dependency to the package.
+      - name: Validate issue templates
+        run: ruby scripts/validate-issue-templates.rb
